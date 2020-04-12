@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n, q, size;
+    vector<vector<int>> varr;
+    cin >> n >> q;
+
+    for(int i = 0;i < n; i++)
+    {
+        cin >> size;
+        vector<int> tv;
+        for(int j = 0; j < size;j++)
+        {
+            int v;
+            cin >> v;
+            tv.push_back(v);
+        }
+        varr.push_back(tv);
+    }
+    for(int ii = 0;ii<q;ii++)
+    {
+        int a,b;
+        cin >> a >> b;
+        cout << varr[a][b] << "\n";
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
